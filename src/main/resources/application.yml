@@ -16,6 +16,7 @@ spring:
       database: lomelodb
       uri: mongodb://localhost:27017/lomelodb
 
+
 logging:
   level:
     org:

@@ -9,24 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-@RequiredArgsConstructor
-public class AccountService {
 
-    @Autowired
-    AccountRepository repository;
+public interface AccountService {
 
-    public Optional<Account> getAccount(String _id){
-//        return null;
-        return repository.findById(_id);
-    }
-//
-    public List<Account> getAllAccount(){
+    public Optional<Account> getAccount(String _id);
 
-        return repository.findAllByCustomQueryWithList();
-    }
+    public List<Account> getAllAccount();
 
-    public Account insertAccount(Account body){
-        return repository.save(body);
-    }
+    public Account insertAccount(Account body);
 }
